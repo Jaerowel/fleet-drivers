@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Home, User,Settings, Wrench} from "lucide-react-native"; // If not installed, use icons from react-native-vector-icons or Expo Icons
+import { Home, User,Settings, Wrench, Fuel} from "lucide-react-native"; // If not installed, use icons from react-native-vector-icons or Expo Icons
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity, View } from "react-native";
 
@@ -47,6 +47,13 @@ export default function TabLayout() {
           options={{
             title: "Maintenance",
             tabBarIcon: ({ color }) => <Wrench size={25} color={color} />,
+          }}
+        />
+           <Tabs.Screen
+          name="refuel"
+          options={{
+            title: "Refuel",
+            tabBarIcon: ({ color }) => <Fuel size={25} color={color} />,
           }}
         />
       </Tabs>
